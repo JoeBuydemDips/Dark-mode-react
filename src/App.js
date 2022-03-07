@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import data from "./data";
 import Article from "./Article";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const getStorageTheme = () => {
   let theme = "light-theme";
@@ -32,7 +33,7 @@ function App() {
         <div className="nav-center">
           <h1>overreacted</h1>
           <button className="btn" onClick={toggleTheme}>
-            toggle
+            {theme === "light-theme" ? <MdDarkMode /> : <MdLightMode />}
           </button>
         </div>
       </nav>
